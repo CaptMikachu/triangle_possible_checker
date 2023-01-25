@@ -72,9 +72,12 @@ bool is_triangle(float A_f, float B_f, float C_f, int &type_f) {
 		return false;
 	}
 
-	
+	if ((A_f + B_f) < C_f || (A_f + C_f) < B_f || (B_f + C_f) < A_f)
+	{
+		return false;
+	}
 
-	else if (A_f + B_f > C_f || A_f + C_f > B_f || B_f + C_f > A_f)
+	else
 	{
 		float e2 = 2.0;
 
